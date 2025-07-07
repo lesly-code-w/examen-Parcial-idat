@@ -1,0 +1,21 @@
+<section class="detalle-producto">
+    <div class="contenedor-detalle">
+      <h1 class="titulo-producto">{{ producto.title }}</h1>
+  
+      <div class="contenido-detalle">
+        <img [src]="producto.imagen" alt="{{ producto.title }}" class="imagen-producto">
+  
+        <div class="info-producto">
+          <p class="descripcion">{{ producto.description }}</p>
+          <p><strong>Categoría:</strong> {{ producto.category }}</p>
+          <p><strong>Precio:</strong> S/ {{ producto.price }}</p>
+          <p><strong>Stock:</strong> {{ producto.stock }}</p>
+          <p><strong>Marca:</strong> {{ producto.brand }}</p>
+          <p><strong>Peso:</strong> {{ producto.weight }} gr</p>
+        </div>
+      </div>
+  
+      <a routerLink="/productos" class="btn-rosado mt-4">Volver a Productos</a>
+    </div>
+  </section>
+  

@@ -1,0 +1,26 @@
+.text-pastel {
+  color: #d63384;
+}
+
+.btn-rosado {
+  background: linear-gradient(135deg, #d63384, #e85ca4);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-rosado:hover {
+  background: linear-gradient(135deg, #c22770, #d94a92);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.sombra-pastel {
+  box-shadow: 0 4px 16px rgba(214, 51, 132, 0.2);
+}

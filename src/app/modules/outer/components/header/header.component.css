@@ -1,0 +1,119 @@
+/* Navbar fijo y transición elegante */
+.seccion-home {
+  padding-top: 30px; /* Ajusta según la altura real de tu navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: #fff5f9;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  padding: 10px 20px;
+  transition: box-shadow 0.3s, background-color 0.3s;
+  box-shadow: none;
+}
+
+/* Sombra inicial (solo si quieres que tenga una sombra muy suave siempre) */
+.sombra-navbar {
+  box-shadow: none;
+}
+
+/* Sombra que aparece dinámicamente al hacer scroll */
+.sombra-activa {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo de la marca */
+.nombre-marca {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  color: #d63384;
+  text-shadow: 1px 1px 2px rgba(214, 51, 132, 0.3);
+  cursor: pointer;
+}
+
+/* Enlaces del menú */
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-link:hover {
+  color: #d63384;
+}
+
+/* Íconos de Login y Carrito */
+.icono-btn {
+  color: #d63384;
+  margin-left: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.icono-btn:hover {
+  color: #c22770;
+}
+
+/* Badge contador del carrito */
+.badge {
+  font-size: 0.75rem;
+  background-color: #d63384;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+/* Buscador estilo pastel */
+.buscador input {
+  border-radius: 20px;
+  border: 1px solid #ddd;
+}
+
+.buscador button {
+  background-color: #d63384;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.buscador button:hover {
+  background-color: #c22770;
+}
+.seccion-quienes-somos {
+  background-color: #fff3f6;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contenedor-quienes {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.titulo-quienes {
+  font-size: 2rem;
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+.texto-quienes {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+

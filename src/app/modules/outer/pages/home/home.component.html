@@ -1,0 +1,89 @@
+<!-- sección bienvenida -->
+<section class="seccion-home">
+  <div class="contenido-home">
+    <h1 class="titulo-principal">¡Bienvenido a Punto Dulce!</h1>
+    <p class="descripcion-home">Deliciosos postres y pasteles artesanales hechos con amor.</p>
+    <button class="btn btn-rosado mt-4" routerLink="/productos">Ver Productos</button>
+  </div>
+</section>
+
+<!-- carrusel de categorías -->
+<section class="seccion-categorias">
+  <h2 class="titulo-seccion">¿Qué estás buscando hoy?</h2>
+
+  <div class="contenedor-categorias">
+    <div class="carrusel-con-flechas" (mouseenter)="mostrarFlechas = true" (mouseleave)="mostrarFlechas = false">
+
+      <button class="flecha-izquierda" *ngIf="mostrarFlechas" (click)="moverCarrusel('izquierda')">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <div class="carrusel-categorias" #carrusel>
+        <div class="carrusel-track">
+          <div class="categoria" *ngFor="let item of categorias">
+            <img [src]="item.imagen" [alt]="item.nombre">
+            <p class="nombre-categoria">{{ item.nombre }}</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="flecha-derecha" *ngIf="mostrarFlechas" (click)="moverCarrusel('derecha')">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- Recomendados -->
+<section class="seccion-recomendados">
+  <h2 class="titulo-seccion">Recomendados para ti</h2>
+
+  <div class="filtros-recomendados">
+    <span *ngFor="let filtro of filtros"
+          [class.activo]="filtro === filtroSeleccionado"
+          (click)="seleccionarFiltro(filtro)">
+      {{ filtro }}
+    </span>
+  </div>
+
+  <div *ngIf="productosFiltrados.length > 0; else sinProductos">
+    <div class="grid-recomendados">
+      <div class="tarjeta-producto" *ngFor="let producto of productosFiltrados">
+        <img [src]="producto.imagen" [alt]="producto.nombre">
+        <p class="nombre-producto">{{ producto.nombre }}</p>
+        <p class="card-text">{{ producto.descripcion }}</p>
+        <p class="precio-producto">S/ {{ producto.precio }}</p>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #sinProductos>
+    <p class="mensaje-sin-productos">No hay productos disponibles para esta categoría.</p>
+  </ng-template>
+</section>
+
+<!-- Quiénes Somos -->
+<section class="seccion-quienes-somos">
+  <div class="contenedor-quienes">
+    <h2 class="titulo-quienes">Quiénes Somos</h2>
+    <p class="texto-quienes">
+      En el año 1993 llegué al Perú, desde Alemania, con un libro de recetas de fina pastelería y panes tradicionales alemanes. Años más tarde, en 1996, fundé la pastelería <strong>Punto Dulce</strong>.
+    </p>
+    <p class="texto-quienes">
+      Poco a poco empezamos a conquistar el paladar de nuestra clientela, quienes desde entonces disfrutan del saber y el sabor de <strong>Punto Dulce</strong> en sus hogares, centros de trabajo, ocasiones especiales y también en nuestro propio café. Nuestra filosofía es muy simple: utilizar los más finos ingredientes y un método tradicional y casero para elaborar un producto exquisito.
+    </p>
+    <p class="texto-quienes">
+      En el año 2008, <strong>Punto Dulce</strong> recibe un aire innovador con la llegada de mi hija Pia, quien trae nuevas ideas de Europa, sin que por ello se pierda mi filosofía. De esa manera, se continúa llevando adelante la tradición familiar.
+    </p>
+    <p class="texto-quienes">
+      <strong>Punto Dulce</strong> también ofrece bocaditos gourmet dulces y salados, deliciosas lasañas, pasteles salados y mermeladas caseras entre otros. Desde sus inicios, <strong>Punto Dulce</strong> se ha caracterizado por sus muy altos estándares y un control de calidad exigente, que son el sello que respalda sus productos.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+

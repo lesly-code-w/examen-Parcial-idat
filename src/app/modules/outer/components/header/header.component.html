@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg bg-white sombra-navbar fixed-top" [ngClass]="{'sombra-activa': sombraActiva}">
+  <div class="container">
+
+    <a class="navbar-brand nombre-marca" routerLink="/">Punto Dulce</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item mx-2">
+          <a class="nav-link" routerLink="/">Inicio</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" routerLink="/productos">Productos</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" routerLink="/tables">Tabla</a>
+        </li>
+      </ul>
+
+      <!-- Buscador -->
+      <form class="d-flex ms-3 buscador" role="search" (submit)="buscar()">
+        <input class="form-control me-2" type="search" placeholder="Buscar" [(ngModel)]="terminoBusqueda" name="busqueda">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+
+      <!-- Ícono Login -->
+      <a class="nav-link ms-3 icono-btn" routerLink="/login" title="Acceder">
+        <i class="bi bi-person-circle fs-4"></i>
+      </a>
+
+      <!-- Ícono Carrito -->
+      <a class="nav-link ms-2 icono-btn position-relative" routerLink="/carrito" title="Carrito de Compras">
+        <i class="bi bi-cart fs-4"></i>
+        <span *ngIf="cantidadCarrito > 0" class="position-absolute top-0 start-100 translate-middle badge bg-danger">
+          {{ cantidadCarrito }}
+        </span>
+      </a>
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+

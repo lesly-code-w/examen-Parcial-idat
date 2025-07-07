@@ -1,0 +1,42 @@
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    
+    <div class="col-lg-6 text-center text-lg-start">
+      <h1 class="display-4 fw-bold lh-1 mb-3 text-pastel">Bienvenido a Punto Dulce</h1>
+      <p class="col-lg-10 fs-5">Inicia sesión para acceder a nuestros deliciosos productos y promociones especiales.</p>
+      <img src="https://dolcecapriccio.pe/wp-content/uploads/2024/08/bn-sec-2-ne-450x323.png" class="img-fluid mt-4 rounded" alt="Punto Dulce">
+    </div>
+
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form class="p-4 p-md-5 border rounded-4 bg-light sombra-pastel">
+        
+        <h2 class="mb-4 text-center text-pastel">Inicia Sesión</h2>
+        
+        <div class="form-floating mb-3">
+          <input name="email" type="email" [(ngModel)]="email" class="form-control" placeholder="name@example.com">
+          <label>Email</label>
+          <p *ngIf="email && (!email.includes('@') || !email.includes('.'))" class="text-danger mt-1">
+            Dirección de correo no válida.
+          </p>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" [(ngModel)]="password" placeholder="Contraseña">
+          <label>Contraseña</label>
+        </div>
+
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox"> Recuérdame
+          </label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-rosado" type="submit">Ingresar</button>
+
+        <hr class="my-4">
+        <small class="text-muted">Al iniciar sesión aceptas los términos y condiciones.</small>
+      </form>
+    </div>
+
+  </div>
+</div>

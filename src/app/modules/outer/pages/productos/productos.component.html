@@ -1,0 +1,21 @@
+<section class="seccion-productos">
+    <h1>Nuestros Productos</h1>
+  
+    <div class="filtros-productos">
+      <button *ngFor="let filtro of filtros"
+              [class.activo]="filtroSeleccionado === filtro"
+              (click)="seleccionarFiltro(filtro)">
+        {{ filtro }}
+      </button>
+    </div>
+  
+    <div class="grid-productos">
+      <div class="tarjeta-producto" *ngFor="let producto of productosFiltrados">
+        <img [src]="producto.imagen" [alt]="producto.nombre">
+        <h3>{{ producto.nombre }}</h3>
+        <p>{{ producto.descripcion }}</p>
+        <p>S/ {{ producto.precio }}</p>
+      </div>
+    </div>
+  </section>
+  

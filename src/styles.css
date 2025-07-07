@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+.layout {
+  display: flex;
+  flex-direction: column;
+  background-color: lightCoral;
+}
+body {
+  padding-top: 40px; /* Ajusta a la altura real de tu navbar */
+  margin: 0;
+  overflow-x: hidden;
+}
